@@ -137,7 +137,7 @@ clean:
 	$(DEL) *~
 	cd $(LIB); $(MAKE) clean
 	cd $(DTA); $(MAKE) clean
-	$(DEL) ../../bin/$(EXEs) 
+	$(DEL) ../../bin/$(EXEs)
 	cd lib; $(MAKE) clean
 
 cleantools:
