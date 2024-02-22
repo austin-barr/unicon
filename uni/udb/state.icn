@@ -86,8 +86,8 @@ end
 
 method stateRead()
 local msg := ""
-   write("udb reading...")
    if \mode == "-adapter" then {
+      write("udb reading...")
       return udap.getNextCommand()
    }
    else {

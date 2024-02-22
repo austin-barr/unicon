@@ -486,6 +486,7 @@ class Adapter(
          writes(sock, response)
 
          numScopes := 0
+         scopesList := []
       }
       
    end
@@ -618,8 +619,6 @@ class Adapter(
       kill(\shellProcessId, 9)
       # End communication with client
       close(\sock)
-      # Stop trying to communicate target program and dapcom
-      stop_debuggee_dapcom_communication := "__true__"
       # Restart session
       put_cmdQueue("reset")
    end
