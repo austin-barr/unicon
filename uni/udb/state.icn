@@ -73,8 +73,11 @@ method Write(Msg)
       }
    }
    else {
-      if type(Msg) == "table" then
+      if type(Msg) == "table" then {
+         write(ximage(tojson(Msg)))
          Msg := Msg["consoleMsg"]
+      }
+         
       write(Msg)
    }
 
@@ -118,8 +121,10 @@ method Writes(Msg)
       }
    }
    else {
-      if type(Msg) == "table" then
+      if type(Msg) == "table" then {
+         writes(ximage(tojson(Msg)))
          Msg := Msg["consoleMsg"]
+      }
       writes(Msg)
    }
 
